@@ -1,0 +1,15 @@
+version: '3'
+services:
+  prometheus:
+    build: ./prometheus
+    restart: always
+    image: prometheus-local
+    ports:
+      - "9090:9090"
+    container_name: "prometheus-local"
+  grafana:
+    image: grafana/grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    container_name: "grafana-local"
