@@ -12,6 +12,7 @@ scrape_configs:
 - job_name: 'micrometer'
   # metrics_path defaults to '/metrics'
   # scheme defaults to 'http'.
+  # test
   metrics_path: /actuator/prometheus
   static_configs:
   - targets: ['10.209.20.166:8080']
